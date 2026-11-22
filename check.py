@@ -1,3 +1,8 @@
+# Verification code for "Six-Divisor Pairs, abc Triples, and the
+# Square Nagell-Ljunggren Equation" by Zephyre Weatherford.
+# Checks the congruences used for the base 2401 and every row of Table 1.
+# Run: python3 check.py
+
 C, modulus = 2401, 59**2
 assert pow(C, 665, modulus) == modulus - 2
 assert pow(C, 1711, modulus) == 1
@@ -21,7 +26,8 @@ for j in range(4):
 # 0    49     42      1
 # 1    343    294     127
 # 2    2401   2058    421
-# 3    16807 14406    421
+# 3    16807  14406   421
+
 assert pow(2401, 29, 59) == 1
 assert pow(2401, 29, 59**2) == 886
 assert 23**2 % 59 == 59 - 2
@@ -30,7 +36,7 @@ assert pow(2401, 830500, 59**3) == 59**3 - 2
 
 # Verify Table 1: (base, j, k, least exponent, period).
 rows = [
-    (243, 0, 0, 1, 42),
+    (243, 0, 0, 1, 42),
     (243, 1, 0, 127, 294),
     (243, 0, 1, 253, 462),
     (243, 1, 1, 715, 3234),
@@ -57,3 +63,5 @@ for base, j, k, least, period in rows:
     assert period == order * divisor
 print("Table 1: all 8 rows verified")
 # Expected final line: Table 1: all 8 rows verified
+
+

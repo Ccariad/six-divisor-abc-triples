@@ -15,7 +15,7 @@ The paper shows that for integers n > 1, if n − 1 and n both have exactly six 
 
 It checks:
 
-- the congruences modulo 3481 = 59² used for the base 2401 (Corollary 2 and Lemma 7)
+- the congruences modulo 3481 = 59² used for the base 2401 (Theorem 2 and Lemma 7)
 - the least exponents e with 243^e ≡ −2 (mod 7^(2+j)) for j = 0, 1, 2, 3
 - a higher-power example for the 2401 branch
 - every exponent and period in Table 1
